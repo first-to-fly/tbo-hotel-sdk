@@ -6,6 +6,18 @@
 
 A comprehensive TypeScript SDK for integrating with the TBO Holidays Hotel API, featuring full type safety, modern async/await patterns, and production-ready error handling.
 
+## 📚 Documentation
+
+**[👉 Complete Documentation](./docs/README.md)** - Comprehensive guides, API reference, and examples
+
+### Quick Links
+- [🚀 Quick Start Guide](./docs/examples/quickstart.md) - Get started in 5 minutes
+- [📊 API Overview](./docs/api/overview.md) - All endpoints and status codes
+- [🔍 Hotel Search API](./docs/api/search.md) - Search hotels with examples
+- [🌍 Utilities API](./docs/api/utilities.md) - Countries, cities, hotel details
+- [🔒 PreBook API](./docs/api/prebook.md) - Booking verification
+- [🎯 Complete Booking Flow](./docs/examples/booking-flow.md) - End-to-end example
+
 ## 🚀 Quick Start
 
 ### Installation
