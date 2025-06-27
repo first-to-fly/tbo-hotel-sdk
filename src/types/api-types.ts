@@ -3,12 +3,13 @@
  */
 
 // Base API Response
-export interface APIResponse<T = any> {
+export interface APIResponse<T = unknown> {
   Status: {
     Code: number;
     Description: string;
   };
   ResponseTime?: number;
+  data?: T;
 }
 
 // Hotel Search Types

@@ -1,12 +1,47 @@
 # TBO Holidays Hotel API - TypeScript SDK
 
+[![GitHub](https://img.shields.io/badge/GitHub-first--to--fly%2Ftbo--typescript--sdk-blue?logo=github)](https://github.com/first-to-fly/tbo-typescript-sdk)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.3+-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 A comprehensive TypeScript SDK for integrating with the TBO Holidays Hotel API, featuring full type safety, modern async/await patterns, and production-ready error handling.
 
 ## 🚀 Quick Start
 
 ### Installation
 
+Since this package is not yet published to npm, you can install it directly from GitHub:
+
 ```bash
+# Install from GitHub
+npm install https://github.com/first-to-fly/tbo-typescript-sdk
+
+# Or using yarn
+yarn add https://github.com/first-to-fly/tbo-typescript-sdk
+
+# Or using pnpm
+pnpm add https://github.com/first-to-fly/tbo-typescript-sdk
+```
+
+**Note**: After installation, you may need to build the TypeScript files:
+
+```bash
+# Navigate to the installed package and build
+cd node_modules/tbo-holidays-typescript-sdk
+npm run build
+```
+
+Or if you prefer to use the TypeScript files directly with ts-node or a bundler that supports TypeScript.
+
+### Development Setup
+
+If you want to clone and develop the SDK locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/first-to-fly/tbo-typescript-sdk.git
+cd tbo-typescript-sdk
+
 # Install dependencies
 npm install
 
@@ -23,7 +58,7 @@ npm run test:search
 ### Basic Usage
 
 ```typescript
-import TBOHolidaysSDK from "./src/index";
+import TBOHolidaysSDK from "tbo-holidays-typescript-sdk";
 
 // Initialize SDK
 const sdk = new TBOHolidaysSDK();
@@ -138,7 +173,7 @@ const sdk = new TBOHolidaysSDK({
 ## 🌟 Complete Booking Flow Example
 
 ```typescript
-import TBOHolidaysSDK from "./src/index";
+import TBOHolidaysSDK from "tbo-holidays-typescript-sdk";
 
 async function bookHotel() {
   const sdk = new TBOHolidaysSDK();

@@ -2,6 +2,7 @@
  * Base HTTP client for TBO Holidays Hotel API
  */
 
+import 'dotenv/config';
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 import { TBOClientConfig, TBOError, APIResponse } from '../types/api-types';
 
@@ -11,7 +12,7 @@ export class TBOBaseClient {
 
   constructor(config: TBOClientConfig = {}) {
     this.config = {
-      baseURL: config.baseURL || 'http://api.tbotechnology.in/TBOHolidays_HotelAPI',
+      baseURL: config.baseURL || process.env.TBO_BASE_URL || 'http://api.tbotechnology.in/TBOHolidays_HotelAPI',
       username: config.username || process.env.TBO_USERNAME || '',
       password: config.password || process.env.TBO_PASSWORD || '',
       timeout: config.timeout || 30000,

@@ -2,9 +2,8 @@
  * Comprehensive TBO API Test Suite
  */
 
+import 'dotenv/config';
 import TBOHolidaysSDK from './index';
-import { HotelSearchClient } from './clients/hotel-search-client';
-import { PreBookClient } from './clients/prebook-client';
 
 async function runComprehensiveTest() {
   console.log('🧪 TBO Holidays API - Comprehensive Test Suite\n');

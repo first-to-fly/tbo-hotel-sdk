@@ -1,0 +1,54 @@
+{
+  "name": "tbo-holidays-typescript-sdk",
+  "version": "1.0.0",
+  "description": "A comprehensive TypeScript SDK for integrating with the TBO Holidays Hotel API",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/index.ts",
+    "test": "ts-node src/test.ts",
+    "test:utilities": "ts-node src/examples/utilities.ts",
+    "test:search": "ts-node src/examples/hotel-search.ts",
+    "test:simple": "ts-node src/simple-test.ts",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "prepublish": "pnpm run clean && pnpm run build"
+  },
+  "keywords": [
+    "tbo",
+    "holidays",
+    "hotel",
+    "api",
+    "typescript",
+    "sdk",
+    "booking",
+    "travel"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "eslint": "^8.55.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.0.0",
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ]
+}

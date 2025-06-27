@@ -2,12 +2,13 @@
  * Simple API connectivity test - matching Python approach exactly
  */
 
+import 'dotenv/config';
 import axios from 'axios';
 
 async function simpleTest() {
   console.log('🔍 Simple TBO API Test - Python Style\n');
   
-  const baseURL = 'http://api.tbotechnology.in/TBOHolidays_HotelAPI';
+  const baseURL = process.env.TBO_BASE_URL || 'http://api.tbotechnology.in/TBOHolidays_HotelAPI';
   const auth = {
     username: process.env.TBO_USERNAME || 'your-username',
     password: process.env.TBO_PASSWORD || 'your-password'
