@@ -12,7 +12,7 @@ The PreBook API verifies booking availability and provides final pricing before 
 ### Basic Usage
 
 ```typescript
-import TBOHolidaysSDK from "tbo-holidays-typescript-sdk";
+import TBOHolidaysSDK from "tbo-hotel-sdk";
 
 const sdk = new TBOHolidaysSDK();
 

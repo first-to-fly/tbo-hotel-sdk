@@ -17,7 +17,7 @@ The complete booking flow consists of these steps:
 
 ```typescript
 import 'dotenv/config';
-import TBOHolidaysSDK from "tbo-holidays-typescript-sdk";
+import TBOHolidaysSDK from "tbo-hotel-sdk";
 
 interface BookingFlowResult {
   success: boolean;

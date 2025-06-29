@@ -24,7 +24,7 @@ Comprehensive error handling patterns for the TBO Holidays TypeScript SDK. This 
 ### Basic Try-Catch
 
 ```typescript
-import TBOHolidaysSDK from "tbo-holidays-typescript-sdk";
+import TBOHolidaysSDK from "tbo-hotel-sdk";
 
 const sdk = new TBOHolidaysSDK();
 

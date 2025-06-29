@@ -7,7 +7,7 @@ Real-world examples of using the Utilities API for location data and hotel infor
 ### Get All Countries
 
 ```typescript
-import TBOHolidaysSDK from "tbo-holidays-typescript-sdk";
+import TBOHolidaysSDK from "tbo-hotel-sdk";
 
 const sdk = new TBOHolidaysSDK();
 

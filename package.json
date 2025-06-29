@@ -1,5 +1,5 @@
 {
-  "name": "tbo-holidays-typescript-sdk",
+  "name": "tbo-hotel-sdk",
   "version": "1.0.0",
   "description": "A comprehensive TypeScript SDK for integrating with the TBO Holidays Hotel API",
   "main": "dist/index.js",

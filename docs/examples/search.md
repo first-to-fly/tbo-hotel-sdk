@@ -7,7 +7,7 @@ Real-world examples of hotel search functionality. All examples are based on our
 ### Single Room Search
 
 ```typescript
-import TBOHolidaysSDK from "tbo-holidays-typescript-sdk";
+import TBOHolidaysSDK from "tbo-hotel-sdk";
 
 const sdk = new TBOHolidaysSDK();
 

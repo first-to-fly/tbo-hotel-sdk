@@ -12,7 +12,7 @@ The Hotel Search API is the core functionality for finding available hotels and 
 ### Basic Usage
 
 ```typescript
-import TBOHolidaysSDK from "tbo-holidays-typescript-sdk";
+import TBOHolidaysSDK from "tbo-hotel-sdk";
 
 const sdk = new TBOHolidaysSDK();
 

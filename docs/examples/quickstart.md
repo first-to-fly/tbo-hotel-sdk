@@ -8,20 +8,20 @@ Get up and running with the TBO Holidays TypeScript SDK in 5 minutes. This guide
 
 ```bash
 # Install directly from GitHub
-npm install https://github.com/first-to-fly/tbo-typescript-sdk
+npm install https://github.com/first-to-fly/tbo-hotel-sdk
 
 # Or using yarn
-yarn add https://github.com/first-to-fly/tbo-typescript-sdk
+yarn add https://github.com/first-to-fly/tbo-hotel-sdk
 
 # Or using pnpm
-pnpm add https://github.com/first-to-fly/tbo-typescript-sdk
+pnpm add https://github.com/first-to-fly/tbo-hotel-sdk
 ```
 
 ### Build TypeScript (if needed)
 
 ```bash
 # Navigate to the package and build
-cd node_modules/tbo-holidays-typescript-sdk
+cd node_modules/tbo-hotel-sdk
 npm run build
 ```
 
@@ -51,7 +51,7 @@ TBO_RETRIES=3
 
 ```typescript
 import 'dotenv/config'; // Load .env file
-import TBOHolidaysSDK from "tbo-holidays-typescript-sdk";
+import TBOHolidaysSDK from "tbo-hotel-sdk";
 ```
 
 ## 🏨 Your First Hotel Search
@@ -60,7 +60,7 @@ import TBOHolidaysSDK from "tbo-holidays-typescript-sdk";
 
 ```typescript
 import 'dotenv/config';
-import TBOHolidaysSDK from "tbo-holidays-typescript-sdk";
+import TBOHolidaysSDK from "tbo-hotel-sdk";
 
 async function quickStart() {
   console.log('🚀 TBO SDK Quick Start\n');

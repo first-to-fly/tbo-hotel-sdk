@@ -35,7 +35,7 @@ Load environment variables in your application:
 
 ```typescript
 import 'dotenv/config'; // Load .env file
-import TBOHolidaysSDK from "tbo-holidays-typescript-sdk";
+import TBOHolidaysSDK from "tbo-hotel-sdk";
 
 // SDK automatically uses environment variables
 const sdk = new TBOHolidaysSDK();
@@ -44,7 +44,7 @@ const sdk = new TBOHolidaysSDK();
 ### 2. Direct Configuration
 
 ```typescript
-import TBOHolidaysSDK from "tbo-holidays-typescript-sdk";
+import TBOHolidaysSDK from "tbo-hotel-sdk";
 
 const sdk = new TBOHolidaysSDK({
   baseURL: "http://api.tbotechnology.in/TBOHolidays_HotelAPI",
@@ -479,7 +479,7 @@ const response = await sdk.utilities.getCountryList();
 ```typescript
 // development.ts
 import 'dotenv/config';
-import TBOHolidaysSDK from "tbo-holidays-typescript-sdk";
+import TBOHolidaysSDK from "tbo-hotel-sdk";
 
 const sdk = new TBOHolidaysSDK({
   timeout: 10000,  // Shorter timeout for development
@@ -493,7 +493,7 @@ export default sdk;
 
 ```typescript
 // production.ts
-import TBOHolidaysSDK from "tbo-holidays-typescript-sdk";
+import TBOHolidaysSDK from "tbo-hotel-sdk";
 
 const sdk = new TBOHolidaysSDK({
   baseURL: process.env.TBO_PROD_BASE_URL,
@@ -510,7 +510,7 @@ export default sdk;
 
 ```typescript
 // test-setup.ts
-import TBOHolidaysSDK from "tbo-holidays-typescript-sdk";
+import TBOHolidaysSDK from "tbo-hotel-sdk";
 
 // Mock SDK for testing
 export const mockSdk = {

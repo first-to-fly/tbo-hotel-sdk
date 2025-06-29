@@ -5,7 +5,7 @@ This document provides a comprehensive overview of all TBO Holidays API endpoint
 ## 🌐 Base Configuration
 
 ```typescript
-import TBOHolidaysSDK from "tbo-holidays-typescript-sdk";
+import TBOHolidaysSDK from "tbo-hotel-sdk";
 
 const sdk = new TBOHolidaysSDK({
   baseURL: "http://api.tbotechnology.in/TBOHolidays_HotelAPI",
