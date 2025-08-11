@@ -129,7 +129,7 @@ export interface CustomerName {
   Title: string;
   FirstName: string;
   LastName: string;
-  Type: 'Adult' | 'Child';
+  Type: "Adult" | "Child";
 }
 
 export interface CustomerDetails {
@@ -165,7 +165,7 @@ export interface HotelBookRequest {
   EmailId: string;
   PhoneNumber: string;
   BookingType?: string;
-  PaymentMode: 'Limit' | 'SavedCard' | 'Card';
+  PaymentMode: "Limit" | "SavedCard" | "NewCard";
   PaymentInfo?: PaymentInfo;
 }
 
