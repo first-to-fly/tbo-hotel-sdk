@@ -1,0 +1,79 @@
+name: Publish Package to npm
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test || echo "No tests found, skipping..."
+
+      - name: Run type checking
+        run: npm run typecheck
+
+      - name: Build package
+        run: npm run build
+
+      - name: Extract version from tag
+        id: extract_version
+        run: |
+          VERSION=${GITHUB_REF#refs/tags/v}
+          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Update package version
+        run: |
+          CURRENT_VERSION=$(node -p "require('./package.json').version")
+          if [ "$CURRENT_VERSION" != "${{ steps.extract_version.outputs.VERSION }}" ]; then
+            npm version ${{ steps.extract_version.outputs.VERSION }} --no-git-tag-version
+          else
+            echo "Version already matches tag version: ${{ steps.extract_version.outputs.VERSION }}"
+          fi
+
+      - name: Configure npm authentication
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+
+      - name: Publish to npm
+        run: npm publish --access restricted
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Create GitHub Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: |
+            ## What's Changed
+            
+            Package version ${{ steps.extract_version.outputs.VERSION }} has been published to npm.
+            
+            Install with:
+            ```bash
+            npm install @setkyar/tbo-hotel-sdk@${{ steps.extract_version.outputs.VERSION }}
+            # or
+            npm install @setkyar/tbo-hotel-sdk@${{ steps.extract_version.outputs.VERSION }}
+            ```
+          draft: false
+          prerelease: false

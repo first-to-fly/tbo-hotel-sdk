@@ -15,7 +15,7 @@
     "lint:fix": "eslint src/**/*.ts --fix",
     "typecheck": "tsc --noEmit",
     "clean": "rm -rf dist",
-    "prepublish": "pnpm run clean && pnpm run build"
+    "prepublish": "npm run clean && npm run build"
   },
   "keywords": [
     "tbo",
@@ -42,10 +42,8 @@
     "typescript": "^5.3.0"
   },
   "engines": {
-    "node": ">=16.0.0",
-    "pnpm": ">=8.0.0"
+    "node": ">=16.0.0"
   },
-  "packageManager": "pnpm@8.0.0",
   "files": [
     "dist/**/*",
     "README.md",
